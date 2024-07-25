@@ -9,9 +9,9 @@ console.log(toplam)
 console.log(typeof true) //boolean
 console.log(typeof false) //boolean
 
-let sayi10 = 10
-let sayi20 = 20
-console.log(sayi10 > sayi10) //false
+let number10 = 10
+let number20 = 20
+console.log(number20 > number10) //false
 
 let ogrenciIsmi1
 console.log(typeof ogrenciIsmi1)
