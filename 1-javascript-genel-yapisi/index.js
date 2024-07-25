@@ -1,3 +1,3 @@
 console.log("Merhaba Dünya")
-let name = "Zeynep Nur"
-console.log(name)
+let myName = "Zeynep Nur"
+console.log(myName)
