@@ -9,8 +9,8 @@ let sinifBaskani = "Deniz"
 console.log("Müdür Adı:", mudurAdi)
 console.log("Sınıf Başkanı:", sinifBaskani)
  
-let maas = 7000
+let maass = 7000
 let zam = 0.1
-let zamliMaas = maas + maas * zam
+let zamliMaas = maass + maass * zam
 
 console.log(zamliMaas)
