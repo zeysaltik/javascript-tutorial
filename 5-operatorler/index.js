@@ -8,8 +8,8 @@ result -= number3 //number1 - number3
 result /= number3 //number1 / number3
 result *= number3 //number1 * number3
 result %= number3//number3 % number1
-// result = ++number1
-// reult = nuber1++
+result = ++number1
+reult = nuber1++
 
 console.log(result)
 
