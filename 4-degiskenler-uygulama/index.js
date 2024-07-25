@@ -7,7 +7,7 @@
     2- Deniz Ekin Saltık
         Doğum Tarihi: 2020
         Bilgisayar Notları: 60, 30, 50
-    Geçer Not: 50
+    Geçer Not: 55
 
     Program Şartları:
     1- Öğrencilerin yaşlarını hesaplayınız.
