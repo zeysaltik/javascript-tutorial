@@ -85,20 +85,20 @@ for(let i = 0; i < users.length; i++){
 // }
 
 
-// let yazi = ""
+let yazi = ""
 // console.log(yazi.slice(0, 5))
 // console.log(yazi.slice(0, 4))
 // console.log(yazi.slice(0, 3))
 // console.log(yazi.slice(0, 2))
 // console.log(yazi.slice(0, 1))
 
-// let starCount = 100;
-// for (let i = 0; i < starCount; i++) {
-//     yazi += "*"    
-// }
+let starCount = 3;
+for (let i = 0; i < starCount; i++) {
+    yazi += "*" 
+}
 
-// // console.log(yazi)
-// for (let i = starCount; i > 0; i--) {
-//     console.log(yazi.slice(0, i))
-// }
+console.log(yazi)
+for (let i = starCount; i > 0; i--) {
+    console.log(yazi.slice(0, i))
+}
 
