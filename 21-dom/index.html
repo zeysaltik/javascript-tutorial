@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+    <title>Javascript DOM</title>
+    <style>
+        h1 {
+            /* color: red */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1 class="title">Javascript DOM</h1> -->
+    <h2>Öğrenci Listesi</h2>
+
+    <ul class="list">
+        <li class="list-item">Zeynep</li>
+        <li class="list-item">Deniz</li>
+        <li class="list-item">Mustafa</li>
+        <li class="list-item">Saniye</li>
+    </ul>
+    
+    <h2>Öğrenci Listesi2</h2>
+
+    <ul class="list2" id = "list">
+        <li class="list-item">Zeynep</li>
+        <li class="list-item">Deniz</li>
+        <li class="list-item">Mustafa</li>
+        <li class="list-item">Saniye</li>
+    </ul>
+    <script>
+        // const title = document.querySelector("h1")
+        // const title2 = document.getElementById("title")
+        // title.style.color = "red"
+        // title2.style.color = "blue"
+        // document.querySelector("h1").style.color = "white"
+        // document.querySelector("h1").style.backgroundColor = "red"
+        // document.querySelector("h1").style.width = "250px"
+        // document.querySelector("h1").style.height = "100px"
+        // const title = document.querySelector("h1")
+        // title.innerText = "DOM"
+        // title.innerHTML = "<button>click</button>"
+        // const list = document.querySelector("ul")
+        // document.querySelector("li").style.color = "red"
+        // document.querySelector("li:last-child").style.color = "blue"
+        // document.querySelector("li:nth-child(3)").style.color = "yellow"
+        // document.querySelector("li:nth-child(2)").style.color = "green"
+
+        //ÇOKLU SEÇİCİLER
+        // const listItem = document.getElementsByClassName("list-item")
+        // const listItem = document.querySelectorAll(".list-item")
+        // const list1 = document.querySelector(".list")
+        // const listItem = list1.getElementsByTagName("li")
+        const listItems = document.querySelectorAll("#list li")
+        // for (let i = 0; i < listItem.length; i++){
+        //     listItem[i].style.color = "red"
+        // }
+
+        for (let list of listItems) {
+            list.style.color = "blue"
+        }
+    </script>
+</body>
+
+</html>
