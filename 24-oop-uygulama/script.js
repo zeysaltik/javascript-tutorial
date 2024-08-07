@@ -3,7 +3,19 @@ const btnAddTodoDOM = document.getElementById("add-todo")
 const todosDOM = document.querySelector("#todos")
 const btnClearDOM = document.querySelector("#clear")
 
-let todoArr = []
+class Storage {
+    static addTodoStorage(todoArr) {
+        let storage = localStorage.setItem("todo", JSON.stringify(todoArr))
+        return storage
+    }
+
+    static getStorage() {
+        let storage = localStorage.getItem("todo") === null ? [] : JSON.parse(localStorage.getItem("todo"))
+        return storage
+    }
+}
+
+let todoArr = Storage.getStorage()
 
 btnAddTodoDOM.addEventListener("click", function (e) {
     e.preventDefault()
@@ -15,6 +27,8 @@ btnAddTodoDOM.addEventListener("click", function (e) {
     UI.alert("Todo Eklendi!")
     UI.clearInput()
     UI.displayTodos()
+    //add to local storage
+    Storage.addTodoStorage(todoArr)
 })
 
 class Todo {
@@ -59,20 +73,31 @@ class UI {
     }
 
     static removeArrayTodo(id) {
-        todoArr = todoArr.forEach((item) => item.id !== +id )
-        debugger;
+        todoArr = todoArr.filter((item) => item.id !== +id)
+        Storage.addTodoStorage(todoArr)
         UI.displayTodos()
         UI.alert("Todo Silindi!")
+    }
+
+    static clearTodos() {
+        btnClearDOM.addEventListener("click", function () {
+            todoArr = []
+            Storage.addTodoStorage(todoArr)
+            UI.displayTodos()
+            UI.alert("Liste Temizlendi!")
+        })
     }
 
     static alert(text) {
         window.alert(text)
     }
 }
-window.addEventListener("DOMContentLoaded", function () {
-    UI.removeTodo()
+
+window.addEventListener("DOMcontentLoaded", function () {
     UI.displayTodos()
 })
+UI.clearTodos()
+UI.removeTodo()
 
 //! old project
 // textInputDOM.addEventListener("change", function (event) {
