@@ -128,11 +128,108 @@ function priceList() {
 
 //! async/await veri çekme
 
+let myData = [
+    {
+        "id": 1,
+        "name": "Zeynep Nur Saltık",
+        "username": "zeynepnursaltik",
+        "email": "zeysaltik200@gmail.com",
+        "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+                "lat": "-37.3159",
+                "lng": "81.1496"
+            }
+        },
+        "phone": "1-770-736-8031 x56442",
+        "website": "zeynepnursaltik.com",
+        "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Caner Yakupoğlu",
+        "username": "caneryakupoglu",
+        "email": "caneryakupoglu@gmail.com",
+        "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+                "lat": "-37.3159",
+                "lng": "81.1496"
+            }
+        },
+        "phone": "1-770-736-8031 x56442",
+        "website": "caneryakupoglu.com",
+        "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Elif Yakupoğlu",
+        "username": "elifyakupoglu",
+        "email": "elifyakupoglu@gmail.com",
+        "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+                "lat": "-37.3159",
+                "lng": "81.1496"
+            }
+        },
+        "phone": "1-770-736-8031 x56442",
+        "website": "elifyakupoglu.com",
+        "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Selim Kafa",
+        "username": "selimkafa",
+        "email": "selimkafa@mail.com",
+        "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+                "lat": "-37.3159",
+                "lng": "81.1496"
+            }
+        },
+        "phone": "1-770-736-8031 x56442",
+        "website": "selimkafa.com",
+        "company": {
+            "name": "Romaguera-Crona",
+            "catchPhrase": "Multi-layered client-server neural-net",
+            "bs": "harness real-time e-markets"
+        }
+    }
+
+
+]
+
 async function getUserData() {
     try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/users")
-        const userList = await response.json()
-        getUserList(userList)
+        // const response = await fetch("https://jsonplaceholder.typicode.com/users")
+        // const userList = await response.json()
+        getUserList(myData)
     } catch (error) {
         console.log(error)
     } finally {
@@ -142,12 +239,12 @@ async function getUserData() {
 
 function getUserList(userList) {
     const userListDOM = document.querySelector(".user-list")
-    
+
     let userItem = ""
     userList.forEach((user) => {
-       userItem += `
+        userItem += `
         <li class="user-card">
-            <img src="https://i.pravatar.cc/150?img=${user.id}" 
+            <img src="photos/${user.id}.jpg" 
             alt="${user.name}" 
             class="user-image" 
             />
